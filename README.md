@@ -3,6 +3,29 @@
 # Iris 
  
  
+ 
+ 
+ 
+ 
+ 
+#### 3-5
+
+> 简单队列 & 工作模式
+
+工作模式有负载的作用，一个消息只能被一个消费者消费
+
+> 订阅模式
+
+多个消费者同时消费，队列绑定交换机，一个消息多个消费者
+
+> 路由模式
+
+生产端指定消费端进行消费
+
+> topic 模式
+
+[反过来选](https://www.cnblogs.com/LUA123/p/8477387.html)
+ 
 > rabbitmq 
 
 docker pull rabbitmq:management
