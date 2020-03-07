@@ -2,10 +2,36 @@
 
 # Iris 
  
+
+#### 3-7
+
+> MYSQL 主从配置
+
+```yaml
+
+docker run -p 3307:3306 --name mslave -d -e MYSQL_ROOT_PASSWORD=123456 -v /Volumes/C/JAVA/mysqldb2:/var/lib/mysql b3b
+
+docker exec -it a04 bash
+
+
+
+vim /etc/mysql/my.cnf 
+
+
+docker inspect -f '{{.Name}}-{{.NetworkSettings.IPAddress}}' $(docker ps -q)
+
+
+
+```
+
  
+#### 3-6
+
+无法安装iris是因为被墙了
+
+[goproxy和go modules的初步使用](https://blog.csdn.net/qq_42403866/article/details/93654421)
  
- 
- 
+ 可以下只是很慢，缺少的包用git clone下载到src里
  
  
 #### 3-5
