@@ -8,7 +8,7 @@
 > MYSQL 主从配置
 
 ```yaml
-
+docker run -p 3306:3306 --name mmaster -d -e MYSQL_ROOT_PASSWORD=123456 -v /Volumes/C/JAVA/mysqldb:/var/lib/mysql 64e
 docker run -p 3307:3306 --name mslave -d -e MYSQL_ROOT_PASSWORD=123456 -v /Volumes/C/JAVA/mysqldb2:/var/lib/mysql b3b
 
 docker exec -it a04 bash
