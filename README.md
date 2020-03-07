@@ -20,7 +20,37 @@ vim /etc/mysql/my.cnf
 
 docker inspect -f '{{.Name}}-{{.NetworkSettings.IPAddress}}' $(docker ps -q)
 
+1.在master中创建同步用户
+use mysql;
 
+select * from user;
+
+grant REPLICATION slave,REPLICATION CLIENT on *.* to 'slave'@'%';
+or
+grant replication slave on *.* to 'slave'@'%'   ;
+
+
+FLUSH PRIVILEGES;
+
+
+2.在从库通过slave账号连接主库
+mysql -h172.17.0.3 -P3306 -uslave -p123456
+
+3.主库查询show master status;
+
+4.从库配置
+reset slave;
+
+stop slave;
+
+change master to master_host='172.17.0.3',master_user='slave',master_password='123456',master_port=3306
+,master_log_file='mysql-bin.000002',master_log_pos=2206,master_connect_retry=30;
+
+START SLAVE;  
+show slave status;
+  
+
+5.切记要保证没有数据库否则设置了也会同步失败
 
 ```
 
