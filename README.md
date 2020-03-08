@@ -4,6 +4,11 @@
 
 #### 3-8
 
+mac 查看端口占用并
+lsof -i :8080 | awk 'NR==2{print}' | awk '{print $2}'| xargs kill -9
+lsof -i :8080
+kill -9 
+
 [MacOS 上Golang Delve 调试填坑](https://www.jianshu.com/p/137854be2458)
 [MySQL主从同步配置](https://blog.csdn.net/qq_41782425/article/details/88621138)
 [Mac LiteIde 环境 代码提示](https://www.jianshu.com/p/46f425ea4fb6)
