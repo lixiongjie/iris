@@ -1,7 +1,13 @@
 
 
 # Iris 
- 
+
+#### 3-8
+
+[MacOS 上Golang Delve 调试填坑](https://www.jianshu.com/p/137854be2458)
+[MySQL主从同步配置](https://blog.csdn.net/qq_41782425/article/details/88621138)
+[Mac LiteIde 环境 代码提示](https://www.jianshu.com/p/46f425ea4fb6)
+[GO LiteIDE 使用](https://studygolang.com/articles/5996)
 
 #### 3-7
 
@@ -54,16 +60,16 @@ show slave status;
 
 ```
 
- 
+
 #### 3-6
 
 无法安装iris是因为被墙了
 
 [goproxy和go modules的初步使用](https://blog.csdn.net/qq_42403866/article/details/93654421)
- 
+
  可以下只是很慢，缺少的包用git clone下载到src里
- 
- 
+
+
 #### 3-5
 
 > 简单队列 & 工作模式
@@ -81,7 +87,7 @@ show slave status;
 > topic 模式
 
 [反过来选](https://www.cnblogs.com/LUA123/p/8477387.html)
- 
+
 > rabbitmq 
 
 docker pull rabbitmq:management
@@ -96,7 +102,7 @@ docker start rabbitmq
 >控制台信息 
 
 启动容器后，可以浏览器中访问http://localhost:15672来查看控制台信息。
- 
+
 RabbitMQ默认的用户名：guest，密码：guest
 
 >  go get github.com/streadway/amqp
