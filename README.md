@@ -2,6 +2,39 @@
 
 # Iris 
 
+
+
+
+
+#### 3-10
+xorm
+```
+/Users/lixiongjie/go/src/xorm.io/cmd/xorm/xorm reverse mysql "root:123456@tcp(127.0.0.1:3306)/cus?charset=utf8" templates/goxorm
+
+[亲测GO环境搭建，理解go build、go install、go get](https://blog.csdn.net/zhangliangzi/article/details/77914943)
+
+export GOPROXY=https://goproxy.cn
+我以前用的是 https://goproxy.io 这个，但速度太慢而且还总动不动超时。。。。 (o_ _)ﾉ 。。。。最近在用 https://goproxy.cn 感觉很不错，基本没出现过什么问题，按作者说的是开发完之后会搬到国内来，到时候应该会更快吧
+
+```
+
+#### 3-9
+
+
+go get github.com/go-xorm/cmd/xorm
+
+```shell
+
+cd /Users/lixiongjie/go/src/github.com/go-xorm/cmd/xorm 
+
+xorm reverse mysql "root:123456@tcp(127.0.0.1:3306)/?charset=utf8" templates/goxorm/
+
+
+```
+
+
+
+
 #### 3-8
 
 mac 查看端口占用并
@@ -19,8 +52,8 @@ kill -9
 > MYSQL 主从配置
 
 ```yaml
-docker run -p 3306:3306 --name mmaster -d -e MYSQL_ROOT_PASSWORD=123456 -v /Volumes/C/JAVA/mysqldb:/var/lib/mysql 64e
-docker run -p 3307:3306 --name mslave -d -e MYSQL_ROOT_PASSWORD=123456 -v /Volumes/C/JAVA/mysqldb2:/var/lib/mysql b3b
+docker run -p 3306:3306 -d -e MYSQL_ROOT_PASSWORD=123456 -v /Volumes/C/JAVA/mysqldb:/var/lib/mysql 64e
+docker run -p 3307:3306 -d -e MYSQL_ROOT_PASSWORD=123456 -v /Volumes/C/JAVA/mysqldb2:/var/lib/mysql b3b
 
 docker exec -it a04 bash
 
@@ -59,7 +92,7 @@ change master to master_host='172.17.0.3',master_user='slave',master_password='1
 
 START SLAVE;  
 show slave status;
-  
+
 
 5.切记要保证没有数据库否则设置了也会同步失败
 
@@ -114,3 +147,7 @@ RabbitMQ默认的用户名：guest，密码：guest
 
 
 
+
+```
+
+```
